@@ -1,0 +1,26 @@
+Utilizaremos los siguientes componentes de Jetpack Compose.
+
+1. Estructura Principal y Navegación
+Scaffold: Será el contenedor base de ambas pantallas. Este componente es fundamental porque nos permite estructurar fácilmente la pantalla con una barra superior (`topBar`), un área de contenido central y, en el caso de la primera pantalla, una barra de navegación inferior (`bottomBar`).
+TopAppBar: Se utilizará para la barra superior verde. En la pantalla principal mostrará el texto "Farmacia Central" junto con los iconos de búsqueda y perfil. En la pantalla del carrito, se configurará con un icono de retroceso (`navigationIcon`), el título "Mi Carrito" y un icono de papelera como acción (`actions`).
+NavigationBar y NavigationBarItem: Conformarán el menú inferior de la primera pantalla, permitiendo al usuario cambiar entre las vistas de "Categorías", "Buscar", "Carrito" y "Perfil".
+
+2. Contenedores de Listas y Layouts
+
+LazyColumn: Es el componente crucial para el rendimiento de la aplicación. Se usará como el contenedor principal del cuerpo de ambas pantallas para renderizar las listas dinámicas (la lista de objetos `Categoria` y la lista de objetos `Medicamento`). A diferencia de un simple `Column` con scroll, `LazyColumn` solo renderiza los elementos que son visibles en la pantalla.
+Row (Filas): Se utilizará extensamente dentro de cada tarjeta para alinear elementos horizontalmente. Por ejemplo, para colocar la imagen del medicamento a la izquierda y sus detalles textuales a la derecha, o para alinear los botones de **[ - ]**, la cantidad y **[ + ]** en el carrito.
+Column (Columnas): Se empleará para apilar elementos verticalmente. Dentro de una tarjeta de producto, un `Column` organizará el nombre del medicamento, el principio activo y el precio, uno debajo del otro.
+
+3. Tarjetas y Elementos Visuales
+
+Card / ElevatedCard: Envolverá cada uno de los elementos de las listas (tanto las categorías como los medicamentos). Proporciona los bordes redondeados (`shape = RoundedCornerShape`), el fondo blanco y la sombra sutil (`elevation`) que separa cada ítem del fondo general de la pantalla.
+Surface: Lo utilizaremos para crear las etiquetas dinámicas de colores. Por ejemplo, la etiqueta verde de "Venta Libre" o la roja de "Receta Médica" se construirán con un `Surface` que defina el color de fondo y el radio de los bordes, conteniendo un texto en su interior.
+Icon e Image: Icon se usará para gráficos vectoriales simples de un solo color (como las flechas de retroceso, el carrito, la papelera). Si los productos farmacéuticos usan ilustraciones más complejas, se utilizará `Image` junto con `painterResource`.
+
+4. Componentes Atómicos e Interacción
+
+Text: Utilizado para todo el contenido tipográfico. Se le aplicarán diferentes modificadores y estilos (como 'FontWeigth.Bold' para los títulos de los medicamentos y `Color.Gray` o `Color.Red` para los principios activos y mensajes de advertencia, respectivamente).
+Button: Formará el botón principal de llamada a la acción en la parte inferior del carrito ("Proceder al Pago"). Su color de fondo se ajustará al verde institucional de la farmacia.
+IconButton: Se utilizará para botones que solo contienen un icono y no tienen fondo, como la flecha de volver atrás o la papelera.
+OutlinedButton o Box clickeable: Para los pequeños controles de cantidad (**[ - ]** y **[ + ]**) en el carrito, permitiendo interactuar con los métodos de stock definidos en las clases del Checkpoint 1 y 2.
+HorizontalDivider: Una línea fina que se colocará en la pantalla del carrito, justo encima del panel fijo de total a pagar, para separar visualmente la lista deslizable del resumen de cobro.
