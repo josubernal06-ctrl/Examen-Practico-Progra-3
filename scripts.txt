@@ -1,0 +1,88 @@
+prompt 1:
+
+
+
+
+	2.
+Consigna: El estudiante debe elegir entre los siguientes casos de
+estudio: Farmacia, Ferretería, Librería, Tienda de Artículos
+deportivos.
+
+Con
+el caso de estudio elegido el estudiante debe entregar:
+
+
+	Modelo
+	de clases
+
+	Implementación
+	de las clases en el proyecto
+
+	Diseño
+	de pantallas
+
+	Aplicación
+	con dos pantallas que liste al menos dos de los objetos
+	implementados
+
+Debe
+subir todo el proyecto a un repositorio público de Github y debe ser
+compartido al docente.
+
+Checkpoint
+1 – Diseño de clases [15 puntos]
+Analiza
+el problema planteado y presenta el diseño de las clases necesarias,
+identificando sus atributos, métodos y relaciones.
+Primer
+commit
+
+
+Checkpoint
+2 – Implementación [10 puntos]
+	Implementa
+en Kotlin las clases diseñadas en el checkpoint anterior, aplicando
+los conceptos de Programación Orientada a Objetos.
+Segundo
+Commit
+
+
+Checkpoint
+3 – Scripts [10 puntos]
+Cargar
+los Scripts Usados en el examen
+Tercer
+Commit
+
+
+Checkpoint
+4 – Diseño de Interfaz [30 puntos]
+Diseña
+dos interfaces que permita listar al menos dos de los objetos
+implementados, detalla los componentes de Jetpack compose que serán
+utilizados.
+
+
+Checkpoint
+5 – Interfaz [20 puntos]
+Construye
+dos pantallas utilizando Jetpack Compose que permita visualizar
+información de al menos dos de los objetos implementados.
+
+
+Checkpoint
+6 – Compilación y ejecución [15 puntos]
+Demuestra
+que tu proyecto compila correctamente y puede ejecutarse en un
+dispositivo o emulador Android.
+
+Necesito que partamos por el checkpoint 1, necesito que me hagas un listado descriptivo de como seria el diagrama de clases en cuestion con POO y aplicando principio SOLID para armar despues el codigo, desglosa que metodos y atributos tendran los objetos en la aplicacion y toma en cuebta los requerimientos de los checkpoints para armarlo
+
+
+prompt 2:
+
+Generame en codigo para mermaid live el diagrama uml de clases
+
+prompt 3:
+
+genera el codigo de todas las clases para el funcionamiento correcto de la aplicacion en lenguaje kotlin
